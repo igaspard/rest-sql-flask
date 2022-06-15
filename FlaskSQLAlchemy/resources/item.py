@@ -24,7 +24,7 @@ class Item(Resource):
         item = ItemModel(name, data['price'])
 
         try:
-            ItemModel.insert()
+            item.insert()
         except:
             # Internal Server Error
             return {"message": "An error occurred inserting the item."}, 500
